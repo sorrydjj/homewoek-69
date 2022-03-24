@@ -30,9 +30,9 @@ async function onClick(event) {
     let answer = await response.json();
     let ans = document.getElementById('answer');
     if (answer['answer']) {
-        ans.innerHTML = '<p id="answer">Ответ: <b>' + String(answer['answer']) + '</b></p>';
+        ans.innerHTML = '<p id="answer" style="color: green;">Ответ: <b>' + String(answer['answer']) + '</b></p>';
     } else {
-        ans.innerHTML = '<p id="answer">Ошибка: <b>' + String(answer['error']) + '</b></p>';
+        ans.innerHTML = '<p id="answer" style="color: red;">Ошибка: <b>' + String(answer['error']) + '</b></p>';
     }
 
 
