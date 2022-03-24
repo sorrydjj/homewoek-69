@@ -18,7 +18,6 @@ def add_view(request):
             num1 = float(body['A'])
             num2 = float(body['B'])
             answer['answer'] = (num1 + num2)
-            print(answer["answer"])
             return JsonResponse(answer)
         else:
             answer['error'] = 'Заполните все поля числами'
@@ -33,7 +32,6 @@ def subtract_view(request, *args, **kwargs):
             num1 = float(body['A'])
             num2 = float(body['B'])
             answer['answer'] = (num1 - num2)
-            print(answer["answer"])
             return JsonResponse(answer)
         else:
             answer['error'] = 'Заполните все поля числами'
@@ -49,7 +47,6 @@ def multiply_view(request, *args, **kwargs):
             num1 = float(body['A'])
             num2 = float(body['B'])
             answer['answer'] = (num1 * num2)
-            print(answer["answer"])
             return JsonResponse(answer)
         else:
             answer['error'] = 'Заполните все поля числами'
@@ -64,7 +61,6 @@ def divide_view(request, *args, **kwargs):
             num1 = float(body['A'])
             num2 = float(body['B'])
             answer['answer'] = (num1 / num2)
-            print(answer["answer"])
             return JsonResponse(answer)
         else:
             answer['error'] = 'Заполните все поля числами'
