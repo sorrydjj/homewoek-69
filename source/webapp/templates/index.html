@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Калькулятор</p>
+<div id="container">
+    <input id="num1" type="number" name="A">
+    <input id="num2" type="number" name="B">
+    <button id="buttons" data-num-url="{% url 'add' %}">Сложение</button>
+    <button id="buttons" data-num-url="{% url 'subtract' %}">Вычитание</button>
+    <button id="buttons" data-num-url="{% url 'multiply' %}">Умножение</button>
+    <button id="buttons" data-num-url="{% url 'divide' %}">Деление</button>
+    <div id="answer"></div>
+</div>
+
+<script src="{% static 'js/calt.js' %}"></script>
+</body>
+</html>
